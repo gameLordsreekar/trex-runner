@@ -33,18 +33,18 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(1200, 600);
 
-  trex = createSprite(50, 180, 20, 50);
+  trex = createSprite(50, 580, 20, 50);
   trex.addAnimation("running", trex_running);
-  trex.scale = 0.5;
+  trex.scale = 0.75;
 
-  ground = createSprite(200, 180, 400, 20);
+  ground = createSprite(200, 580, 400, 20);
   ground.addImage("ground", groundImage);
   ground.x = ground.width / 2;
   ground.velocityX = -4;
 
-  invisibleGround = createSprite(200, 190, 400, 10);
+  invisibleGround = createSprite(200, 590, 400, 10);
   invisibleGround.visible = false;
 
   cloudsGroup = new Group();
@@ -57,7 +57,9 @@ function draw() {
   background(180);
 
   score = score + Math.round(getFrameRate() / 60);
-  text("Score: " + score, 500, 50);
+  textSize(35)
+  text("Score: " + score, 1000, 50);
+  
 
   if (keyDown("space")) {
     trex.velocityY = -10;
@@ -78,14 +80,14 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 60 === 0) {
-    var cloud = createSprite(600, 120, 40, 10);
-    cloud.y = Math.round(random(80, 120));
+    var cloud = createSprite(1300, 520, 40, 10);
+    cloud.y = Math.round(random(80, 520));
     cloud.addImage(cloudImage);
-    cloud.scale = 0.5;
+    cloud.scale = 0.75;
     cloud.velocityX = -3;
 
     //assign lifetime to the variable
-    cloud.lifetime = 200;
+    cloud.lifetime = 1350;
 
     //adjust the depth
     cloud.depth = trex.depth;
@@ -98,7 +100,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if (frameCount % 60 === 0) {
-    var obstacle = createSprite(600, 165, 10, 40);
+    var obstacle = createSprite(1300, 555, 10, 40);
     obstacle.velocityX = -4;
 
     //generate random obstacles
@@ -127,8 +129,8 @@ function spawnObstacles() {
     }
 
     //assign scale and lifetime to the obstacle
-    obstacle.scale = 0.5;
-    obstacle.lifetime = 300;
+    obstacle.scale = 0.75;
+    obstacle.lifetime = 1350;
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
   }

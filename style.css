@@ -1,8 +1,20 @@
-html,
+html{
+  background-color: lavender;
+}
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 canvas {
   display: block;
+}
+h1 {
+  color: dodgerblue;
+}
+underline {
+  color: dodgerblue;
 }
