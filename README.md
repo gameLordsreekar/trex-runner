@@ -1,6 +1,6 @@
 # trex-runner
 
-PS: This project is a Work in Progress. <br>
+PS: This project is a <b><i>Work in Progress.</i></b> <br>
 © 2020-2021 electroNBS. All Rights Reserved.
 <blockquote>
 MIT License
