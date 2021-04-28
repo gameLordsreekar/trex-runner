@@ -1,6 +1,5 @@
 var trex, trex_running, trex_collided;
 var ground, invisibleGround, groundImage;
-
 var cloudsGroup, cloudImage;
 var obstaclesGroup,
   obstacle1,
@@ -9,7 +8,6 @@ var obstaclesGroup,
   obstacle4,
   obstacle5,
   obstacle6;
-
 var score;
 
 function preload() {
@@ -19,11 +17,8 @@ function preload() {
     "./assets/trex4.png"
   );
   trex_collided = loadImage("./assets/trex_collided.png");
-
   groundImage = loadImage("./assets/ground2.png");
-
   cloudImage = loadImage("./assets/cloud.png");
-
   obstacle1 = loadImage("./assets/obstacle1.png");
   obstacle2 = loadImage("./assets/obstacle2.png");
   obstacle3 = loadImage("./assets/obstacle3.png");
@@ -34,7 +29,6 @@ function preload() {
 
 function setup() {
   createCanvas(1200, 600);
-
   trex = createSprite(50, 580, 20, 50);
   trex.addAnimation("running", trex_running);
   trex.scale = 0.75;
